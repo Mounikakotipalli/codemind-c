@@ -1,35 +1,32 @@
 #include<stdio.h>
 int main()
-{ 
-    int n,i,j,z,k,b,s,count; 
-    scanf("%d",&n); 
-    for(i=n+1;i>0;i++) 
-    { 
-        s=0; 
-        for(j=i;j>0;j=j/10) 
-        { 
-            b=j%10; 
-            s=s*10+b; 
+{
+    int n,i,j,k,s,b,count=0;
+    scanf("%d",&n);
+    for(j=n+1;j>0;j++)
+    {
+        s=0;
+        for(i=j;i>0;i=i/10)
+        {
+            b=i%10;s=s*10+b;
             
-        } 
-        if(s==i) 
-        { 
-            count=0; 
-            for(z=1;z<=s;z++) 
-            { 
-                if(s%z==0) 
-                count++; 
+        }
+        if(s==j)
+        {
+            count=0;
+            for(k=1;k<=j;k++)
+            {
+                if(j%k==0)
+                count++;
                 
-            } 
-            if(count==2) 
-            { 
-                printf("%d",s); 
-                break; 
+            }
+            if(count==2)
+            {
+                printf("%d",j);
+                break;
                 
-            } 
+            }
             
-        } 
-        
-    } 
-    
+        }
+    }
 }
