@@ -1,31 +1,30 @@
-#include<stdio.h>
-int main()
-{
-   int n,q,r,s=0;
-   scanf("%d",&n);
-   q=n;
-   while(q>9)
-   {
-      s=0;
-      while(q!=0)
-      {
-        r=q%10;
-        s=s+r*r;
-        q=q/10;  
-      }
-      if(s>9)
-      {
-        q=s;
-      }
-    }
-    if(s==1||s==7)
-    {
-      printf("True");
-    }
-    else
-    {
-      printf("False");
-    }
-	
-// printf("%d",s);
+#include <stdio.h>    
+int isHappyNumber(int num){    
+    int rem = 0, sum = 0;    
+    while(num > 0){    
+        rem = num%10;    
+        sum = sum + (rem*rem);    
+        num = num/10;    
+    }    
+    return sum;    
+}    
+        
+int main()    
+{    
+    int num;
+    scanf("%d",&num);
+    int result = num;    
+        
+    while(result != 1 && result != 4){    
+        result = isHappyNumber(result);    
+    }    
+        
+    //Happy number always ends with 1    
+    if(result == 1)    
+        printf("True");    
+    //Unhappy number ends in a cycle of repeating numbers which contains 4    
+    else if(result == 4)    
+        printf("False");     
+     
+    return 0;    
 }
