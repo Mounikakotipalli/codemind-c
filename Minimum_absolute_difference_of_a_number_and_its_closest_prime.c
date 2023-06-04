@@ -9,39 +9,45 @@ int main()
         count=0;
         for(j=1;j<=i;j++)
         {
-            if(i%j==0)
-            count++;
+            if(i%j==0)count++;
+            
         }
         if(count==2)
         {
             plus=i;
             break;
+            
         }
+        
     }
     //printf("%d ",plus);
     if(plus==n)
     printf("0");
     else{
-    for(i=n-1;i>0;i--)
-    {
-        count=0;
-        for(j=1;j<=i;j++)
+        for(i=n-1;i>0;i--)
         {
-            if(i%j==0)
-            count++;
-        }
-        if(count==2)
-        {
-            minus=i;
-            break;
-        }
+            count=0;
+            for(j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                count++;
+                
+            }
+            if(count==2)
+            {
+                minus=i;
+                break;
+                
+            }
+            
+        }// printf("%d ",minus);
+        if(plus-n>n-minus)
+        printf("%d",n-minus);
+        else if(plus-n<n-minus)
+        printf("%d",plus-n);
+        else if(plus-n==n-minus)
+        printf("%d",n-minus);
+        
     }
-   // printf("%d ",minus);
-    if(plus-n>n-minus)
-    printf("%d",n-minus);
-    else if(plus-n<n-minus)
-    printf("%d",plus-n);
-    else if(plus-n==n-minus)
-    printf("%d",n-minus);
-    }
+    
 }
