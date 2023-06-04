@@ -18,5 +18,7 @@ int main()
         printf("False
 ");
         s=0;
+        
     }
+    
 }
