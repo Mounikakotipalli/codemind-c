@@ -8,10 +8,8 @@ int main()
         c=a+b;
         a=b;
         b=c;
-        if(c<n)
-        min=c;
-        else
-        {
+        if(c<n)min=c;
+        else{
             max=c;
             break;
         }
