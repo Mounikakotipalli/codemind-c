@@ -10,6 +10,7 @@ int main()
         {
             if(i%j==0)
             c++;
+            
         }
         if(c==2)
         {
@@ -20,23 +21,30 @@ int main()
                 {
                     if(z%a==0)
                     co++;
+                    
                 }
                 if(co==2)
                 {
                     if(i*z==n)
-                    {
-                        printf("%d %d",i,z);
-                        s=0;
-                        break;
-                    }
+                {
+                    printf("%d %d",i,z);
+                    s=0;
+                    break;
+                    
+                }
+                    
                 }
                 if(s==0)
                 break;
+                
             }
+            
         }
         if(s==0)
         break;
+        
     }
     if(s!=0)
     printf("-1");
+    
 }
