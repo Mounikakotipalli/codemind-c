@@ -1,31 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,arr[100],a,i,max=0;
     scanf("%d",&n);
-    int i,a[n],b,max=0;
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
-        if(a[i]>max)
-        {
-            max=a[i];
-        }
+        scanf("%d",&arr[i]);
+        if(arr[i]>max)
+        max=arr[i];
+        
     }
-    scanf("%d",&b);
+    scanf("%d",&a);
     for(i=0;i<n;i++)
     {
-        if(a[i]==max)
-        {
-            printf("True ");
-        }
-        else if((a[i]+b)>=max)
-        {
-            printf("True ");
-        }
+        if(arr[i]+a>=max)
+        printf("True ");
         else
-        {
-            printf("False ");
-        }
+        printf("False ");
+        
     }
+    
 }
